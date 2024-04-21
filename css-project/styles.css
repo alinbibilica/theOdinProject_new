@@ -64,10 +64,11 @@
     flex-basis: auto;
 }
 .image img{
-     width:90%;
+     width:100%;
      flex-basis: auto;
-     margin-left: 25%;
-     padding: 10% 10%;
+     /* margin-left: 25%; */
+     align-self: center;
+     /* padding: 10% 10%; */
      /* border: 1px solid white; */}
  
 .main2 {
@@ -132,10 +133,6 @@
      
 }
 
-
-
-
- 
 
 .a1a { 
     width: 50%;
