@@ -1,0 +1,177 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100%
+    
+     
+}
+
+.header {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 10%;
+    width: 100vw;
+    background-color: #1F2937;
+    padding: 10px;
+}
+
+ .logo {
+    margin-right: auto;
+    margin-left: 10%;
+    font-size: 24px;
+    font-weight: bolder;
+ }
+
+ .l3 {
+    margin-right: 10%;
+ }
+
+ .links {
+    font-weight: bold;
+ }
+.header div {
+    color: white;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center ;
+     
+}
+
+.image img{
+     
+     width:90%;
+     height:auto;
+     margin-left: 25%;
+     padding: 10% 10%;
+     border: 1px solid white;
+}
+ 
+ 
+.main1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100vw;
+    flex-shrink: 1;
+    height: 25%;
+    background-color: #1F2937;
+    padding-left: 10%;
+    padding-right: 10%;
+    align-items: center; 
+     
+}
+
+.main2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    margin: 5%;
+    gap: 5px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    flex-basis: 1;
+}
+
+.main3 {
+     
+    flex-shrink: 1;
+    flex-grow: 0;
+    flex-basis: 100vw;
+     justify-content: center;
+     background-color: #E5E7EB;
+     padding: 20px;
+}
+
+.main4 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #3882F6;
+    width: 80vw;
+    height: auto;
+    gap: 20px;
+ 
+}
+
+.main3 quoteblock {
+    font-size: 36px;
+     
+}
+
+ .main2b {
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    height:100%;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+
+    
+ }
+
+ .main2b img {
+    max-width: 30%;
+    max-height: auto; 
+    border-radius: 10%;
+   
+    
+ }
+
+ 
+
+.a1a { 
+    width: 50%;
+    color: white;
+   
+    padding: 10px 10px;
+}
+
+ 
+/* .a1{
+    height: 25%;
+    overflow:hidden;
+    } */
+.footer {
+    
+    height: auto;
+    width: 100vw;
+    background-color: #1F2937;
+    color: white;
+    text-align: center;
+     
+}
+
+
+.a {
+    border: 1px solid black;
+}
+
+.button {
+    color: white;
+    background-color: #3882F6;
+    border-radius: 10%;
+    width: 20%;
+    padding: 5px 5px;
+    margin-top:10px;
+}
