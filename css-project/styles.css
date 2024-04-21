@@ -16,7 +16,7 @@
 .header {
     display: flex;
      
-    flex-flow: row  wrap;
+    flex-flow: row  nowrap;
     gap: 10px;
     align-items: center;
     justify-content: space-between;
@@ -35,7 +35,9 @@
 .header a:hover {
     color:#3882F6;
     font-weight:bolder;
-    font-size: 120%;}
+    font-size: 120%;
+    
+}
 
  .logo {
     margin-right: auto;
@@ -48,7 +50,7 @@
 
 .main1 {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: 100vw;
     height: auto;
     /* overflow: hidden; */
@@ -56,7 +58,11 @@
     padding-left: 10%;
     padding-right: 10%;
     align-items: center;}
-
+.main1 .text
+{   display: flex;
+    flex-direction: column;
+    flex-basis: auto;
+}
 .image img{
      width:90%;
      flex-basis: auto;
@@ -98,7 +104,6 @@
 .main2b img:hover {
     width: 15vw;
     height: auto;
-     
 }    
 
 .main3 {
@@ -135,7 +140,6 @@
 .a1a { 
     width: 50%;
     color: white;
-   
     padding: 10px 10px;
 }
 
