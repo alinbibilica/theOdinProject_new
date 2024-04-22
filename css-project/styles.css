@@ -6,11 +6,14 @@
 .container {
     display: flex;
     flex-direction: column;
-    max-height: 100vh;
+     height: auto;
+     width: 100vw;
     max-width: 100vw;
+    max-height: 100vh;
     justify-content: center;
     align-items: center ;
-    overflow:hidden;
+    /* overflow:hidden; */
+     
  }
  
 .header {
@@ -58,6 +61,7 @@
     padding-left: 10%;
     padding-right: 10%;
     align-items: center;}
+
 .main1 .text
 {   display: flex;
     flex-direction: column;
@@ -76,18 +80,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* padding-top: 10px; */
+    padding: 20px 20px;
     padding-left: 10%;
     padding-right: 10%;
-    gap: 10px;
-    flex-basis: auto;}
+    gap: 5px;
+    flex-basis: auto;
+ }
 
 
 .main2b {
         display: flex;
         flex-direction: row;
         width:80vw;
-        height:auto;
+        height:fit-content;
         justify-content: center;
         align-items: center; 
         gap: 20px;}
@@ -100,21 +105,32 @@
             /* height: auto;
             width: 100%; */
             border-radius: 10%;
-            border: 1px solid black;
+            /* border: 1px solid black; */
          }
-.main2b img:hover {
+/* .main2b img:hover {
     width: 15vw;
     height: auto;
-}    
+    transition: ease-in-out;
+ }     */
 
 .main3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: fit-content;
      
-    flex-shrink: 1;
-    flex-grow: 0;
-    flex-basis: 100vw;
      justify-content: center;
      background-color: #E5E7EB;
-     padding: 20px;
+     padding-left: 10%;
+     padding-right: 10%;
+     padding-top: 5%;
+     padding-bottom: 5%;
+
+}
+ 
+.main3 p {
+    font-style: italic;
 }
 
 .main4 {
@@ -125,13 +141,14 @@
     width: 80vw;
     height: auto;
     gap: 20px;
+    justify-content: center;
+    align-items: center ;
+    margin-top: 20px;
+    padding: 5% 5%; 
+    border: 1px solid black;
  
 }
 
-.main3 quoteblock {
-    font-size: 36px;
-     
-}
 
 
 .a1a { 
@@ -141,12 +158,13 @@
 }
 
  
-/* .a1{
+.a1{
     height: 25%;
     overflow:hidden;
-    } */
+    }
 .footer {
-    
+    position: absolute;
+    bottom: 0;
     height: auto;
     width: 100vw;
     background-color: #1F2937;
@@ -156,9 +174,9 @@
 }
 
 
-.a {
+/* .a {
     border: 1px solid black;
-}
+} */
 
 .button {
     color: white;
