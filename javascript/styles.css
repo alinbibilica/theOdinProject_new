@@ -1,0 +1,28 @@
+*{
+    background-color: blue;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:    center ;
+    width: 100vw;
+    height: 50vh;
+    border: 1px solid white;
+}
+ .buton {
+    background-color:white;
+    width: 25%;
+    height: auto;
+ }
+
+ p{
+    border: 1px solid black;
+    width: 80vw;
+    height: 50%;
+    align-content: center;
+    text-align: center;
+    background-color: blueviolet;
+ }
