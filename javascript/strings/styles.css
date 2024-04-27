@@ -10,19 +10,27 @@ body {
     align-items: center;
     gap: 50px;
     width: 100vw;
-    height: 50vh;
+    height: 100vh;
 }
  
 #decor {
      
-    height: 5px;
+    height: 2px;
     width: auto;
     background-color: blue;
     animation-name: divAnimation;
-    animation-duration: 5s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
     
      
+}
+#decor1, #decor2, #decor3, #decor4 {
+    animation-name: divAnimation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    height: 2px;
+    width: auto;
+    background-color: blue;
 }
 
 @keyframes divAnimation {
