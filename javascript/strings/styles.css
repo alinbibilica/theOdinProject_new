@@ -17,7 +17,10 @@ body {
  button {
     padding: 50px;
     background-color: yellowgreen;
-     
+    font-weight: bolder;
+    font-size: 20px;
+    transition: 1s ease-in-out;
+      
  }
  button:hover {
     background-color: yellow;
