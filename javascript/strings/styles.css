@@ -13,8 +13,56 @@ body {
     height: 50vh;
 }
  
+#decor {
+     
+    height: 5px;
+    width: auto;
+    background-color: blue;
+    animation-name: divAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    
+     
+}
+
+@keyframes divAnimation {
+    0% {
+        
+        width: 0vw;
+        transition: 1s ease-in-out;
+        background-color: green;
+    }
+    
+    25% {
+        width: 25vw;
+        transition: 1s ease-in-out;
+        background-color: yellow;
+    }
+
+
+    50% {
+        width: 50vw;
+        transition: 1s ease-in-out;
+        background-color: orange;
+
+    }
+
+    75% {
+        width: 75vw;
+        transition: 1s ease-in-out;
+        background-color: red;
+    }
+
+    100% {
+        width: 100vw;
+        transition: 1s ease-in-out;
+        background-color: blue;
+    }
+}
 
  button {
+    width: 50vw;
+    height:auto;
     padding: 50px;
     background-color: yellowgreen;
     font-weight: bolder;
