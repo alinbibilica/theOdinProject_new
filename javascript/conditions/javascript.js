@@ -29,8 +29,10 @@ function setWeather(){
      para.style.backgroundImage ="url('https://www.thoughtco.com/thmb/KBskPErWCeHss3-6-gtqKWGToOI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-528903279-599d1549aad52b001107054d.jpg')";
         }
      
-     else {
+     else if (choice === ""){
             para.textContent = " ";
+            para.style.backgroundImage ="url('https://images.theconversation.com/files/304864/original/file-20191203-67028-qfiw3k.jpeg?ixlib=rb-4.1.0&rect=638%2C2%2C795%2C745&q=20&auto=format&w=320&fit=clip&dpr=2&usm=12&cs=strip')";
+      
               }
 
 }
