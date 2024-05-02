@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: skyblue;
+    gap: 5px;
+    overflow: hidden;
+    
+     
+}
+
+.table {
+    border: 1px solid black;
+    width: 50vw;
+    height: 18vh;
+    align-self: center;
+    background-color: burlywood;
+    text-align: center;
+    
+}
+
+.table:hover {
+    transform: translate(42px, 0px);
+    border-radius: 20px;
+    transition: 1s ease-in-out;
+}
