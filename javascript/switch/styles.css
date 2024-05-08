@@ -1,0 +1,37 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ body {
+    background-color:lightgray;
+ }
+ 
+ .container {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 98vw;
+    height: 98vh;
+    border: .5px solid black;
+    margin: auto;
+    padding-top: 10vh;
+    gap: 20px;
+    
+ }
+
+ #weather option{
+    text-align: center;
+ }
+
+ .container p {
+    background-color: chartreuse;
+    width: 100vh;
+    height: auto;
+    text-align: center;
+    margin-top: 20vh;
+     padding: 20px;
+     font-size: larger;
+ }

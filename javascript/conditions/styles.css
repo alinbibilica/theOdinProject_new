@@ -38,4 +38,7 @@
     height: 50%;
     background-position:center ;
     background-size:cover;
+    font-size: 30px;
+    color: white;
+    text-decoration: blue;
  }
