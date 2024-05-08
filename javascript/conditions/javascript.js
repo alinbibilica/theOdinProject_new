@@ -8,24 +8,26 @@ function setWeather(){
 
     const choice = select.value;
     const d = new Date();
+    const currentHour = d.getHours();
+    const currentMin = d.getMinutes();
 
     if (choice === "sunny")
-     {para.textContent = `${d} the sun is shinning!`;
+     {para.textContent = `${currentHour}:${currentMin} the sun is shinning!`;
       para.style.backgroundImage ="url('https://images.pexels.com/photos/936154/pexels-photo-936154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')";
       }
     
      else if (choice === "rainy")
-     {  para.textContent = ` ${d} it is raining hard !!`;
+     {  para.textContent = ` ${currentHour}:${currentMin} it is raining hard !!`;
         para.style.backgroundImage ="url('https://youpress.org.uk/wp-content/uploads/2019/07/rainy--e1562882808676.jpg')";
         }
 
      else if (choice === "snowing")
-     {para.textContent = `  ${d} the show is 10 cm deep!!`;
+     {para.textContent = `  ${currentHour}:${currentMin} the show is 10 cm deep!!`;
      para.style.backgroundImage ="url('https://way-up-north.com/wp-content/uploads/2019/11/winter.jpg')";
         }
 
      else if (choice === "overcast")
-     {para.textContent = ` ${d} the weather is not friendly!!!`;
+     {para.textContent = ` ${currentHour}:${currentMin} the weather is not friendly!!!`;
      para.style.backgroundImage ="url('https://www.thoughtco.com/thmb/KBskPErWCeHss3-6-gtqKWGToOI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-528903279-599d1549aad52b001107054d.jpg')";
         }
      
