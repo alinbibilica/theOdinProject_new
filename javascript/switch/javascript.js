@@ -1,5 +1,17 @@
 const select = document.querySelector("select");
 const para = document.querySelector("p");
+const html = document.querySelector("html");
+
+ 
+
+select.addEventListener("change", () => select.value === "light"
+                        ? update("white", "black")
+                        : update ("black", "white"),);
+
+function update(bgColor, textColor) {
+    html.style.backgroundColor = bgColor;
+    html.style.color = textColor;
+}
 
 select.addEventListener("change", setMenu);
 
@@ -51,3 +63,4 @@ function setMenu() {
 
     }
 }
+

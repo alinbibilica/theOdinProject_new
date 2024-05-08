@@ -4,8 +4,19 @@
     box-sizing: border-box;
  }
 
- body {
-    background-color:lightgray;
+ 
+ .theme{
+    height: auto;
+    width:90vw;
+    margin: auto;
+    height: 9vh;
+    border: 1px solid black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 20px;
+    margin-bottom: 10px;
  }
  
  .container {
@@ -14,11 +25,12 @@
     justify-content: flex-start;
     align-items: center;
     width: 98vw;
-    height: 98vh;
+    height: 90vh;
     border: .5px solid black;
     margin: auto;
     padding-top: 10vh;
     gap: 20px;
+    border-radius: 20px;
     
  }
 
