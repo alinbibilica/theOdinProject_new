@@ -17,16 +17,18 @@ body {
 
 .title  {
     position:fixed;
-    margin-top: -80px;
+    margin-top: 80px;
 }
 .title p {
     color: rgba(240, 58, 52, 0.473);
-    font-size: 50px;
+    font-size: 20px;
     text-shadow:  1px 1px 2px rgba(97, 220, 236, 0.897);
 }
  
 .container {
     position: relative;
+    border: 1px solid white;
+   
 }
 
 .clock {
@@ -39,12 +41,13 @@ body {
     display: flex;
     justify-content: center;
     align-items:center;
+    margin: 20px;
 }
 
 .clock span{
     position: absolute;
     transform: rotate(calc(30deg * var(--i) ));  
-    inset: 12px;
+    inset: 25px;
     text-align: center;
 }
 
