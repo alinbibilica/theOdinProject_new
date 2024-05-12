@@ -2,6 +2,8 @@ let hr = document.getElementById('hour');
 let min = document.getElementById('min');
 let sec = document.getElementById('sec');
  
+
+
 function displayTime(){
 
     let date = new Date();
@@ -19,6 +21,15 @@ function displayTime(){
     hr.style.transform = `rotate(${hRotation}deg)`;
     min.style.transform = `rotate(${mRotation}deg)`;
     sec.style.transform = `rotate(${sRotation}deg)`;
+
+    let sound = new Audio('clock-tick1.mp3');
+    sound.play();
+
 }
+
+    
+
+
+
 
 setInterval(displayTime, 1000);
