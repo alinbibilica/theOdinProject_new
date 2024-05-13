@@ -16,13 +16,20 @@ body {
 }
 
 .title  {
-    position:fixed;
+    display: flex;
+    position:absolute;
     margin-top: 80px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
+
+
 .title p {
-    color: rgba(243, 235, 234, 0.473);
-    font-size: 20px;
-    text-shadow:  0px 0px 20px rgba(97, 220, 236, 0.897);
+    color: rgba(46, 43, 43, 0.473);
+    font-size: 25px;
+    
+     text-shadow:  0px 0px 20px rgba(97, 220, 236, 0.897);  
 }
  
 .container {
@@ -37,13 +44,16 @@ body {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background-color: rgba(155, 137, 137, 0.1);
+    /* background-color: rgba(248, 8, 8, 0.1); */
+    background-image: url('sky.jpg');
+    background-size: contain;
     border: 4px groove rgba(255, 255, 255, 0.25);
     box-shadow: 0px 0px 30px rgba(0,0,0,0.9);
     display: flex;
     justify-content: center;
     align-items:center;
     margin: 20px;
+    
 }
 
 .clock span{
