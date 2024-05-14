@@ -13,7 +13,7 @@ select.addEventListener('change', ()=> {
 
     switch(choice) {
         case 'white' :
-            update(sixthImage,'black', firstImage);
+            update(sixthImage,'white', firstImage);
             break;
         case 'black' :
             update(fifthImage, 'white', secondImage);
