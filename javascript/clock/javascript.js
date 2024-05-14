@@ -25,11 +25,11 @@ function displayTime(){
     let sound = new Audio('clock-tick1.mp3');
     sound.play();
 
+
+
 }
-
-    
-
-
 
 
 setInterval(displayTime, 1000);
+
+  
