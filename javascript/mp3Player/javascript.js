@@ -37,15 +37,23 @@ const   play        = document.querySelector(".play"),
         autoPlayBtn.addEventListener("click", autoPlayToggle );
         volIcon.addEventListener("click", muteSound);
         currentVol.addEventListener("change", changeVolume);
+        slider.addEventListener("change", changeDuration);
+        track.addEventListener("timeupdate", songTimeUpdate);
 
         // loadtracks
         function loadTrack(indexTrack) {
+            clearInterval(timer);
+            resetSlider();
+
+
             track.src = trackList[indexTrack].path;
             trackImage.src = trackList[indexTrack].img;
             title.innerHTML = trackList[indexTrack].name;
             artist.innerHTML = trackList[indexTrack].singer;
              
             track.load();
+
+            timer = setInterval(updateSlider, 1000);
         }
 
         loadTrack(indexTrack);
@@ -115,6 +123,11 @@ function changeVolume(){
     track.volume = currentVol.value / 100;
 }
 
+function changeDuration(){
+    let sliderPosition = track.duration * (slider.value / 100);
+    track.currentTime = sliderPosition;
+}
+
 function autoPlayToggle(){
 
     if (autoplay == 0){
@@ -124,4 +137,55 @@ function autoPlayToggle(){
         autoplay = 0;
         autoPlayBtn.style.background = "#ccc";
     }
+}
+
+//reset slider
+
+function resetSlider(){
+    slider.value = 0;
+}
+
+//update slider
+
+function updateSlider(){
+    let position = 0;
+
+    if (!isNaN(track.duration)){
+        position = track.currentTime * (100 / track.duration);
+        slider.value = position;
+    }
+
+    if (track.ended){
+        play.innerHTML = '<i class="fas fa-play"></i>';
+        if(autoplay == 1 && indexTrack < trackList.length - 1){
+            indexTrack++;
+            loadTrack(indexTrack);
+            playSong();
+        } else if (autoplay == 1 && indexTrack == trackList.length - 1){
+            indexTrack = 0;
+            loadTrack(indexTrack);
+            playSong();
+
+        }
+    }
+}
+
+//updated current song time 
+
+function songTimeUpdate(){
+    let curmins = Math.floor(track.currentTime / 60);
+    let cursecs = Math.floor(track.currentTime - curmins * 60);
+
+    let durmins = Math.floor(track.duration / 60);
+    let dursecs = Math.floor(track.duration - durmins * 60);
+
+    if (dursecs < 10){
+        dursecs = "0" + dursecs;
+    }
+
+    if (curmins < 10){
+        curmins = "0" + curmins;
+    }
+
+ 
 }
