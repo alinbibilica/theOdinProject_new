@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+}
+
+ .box {
+    display: flex;
+    border: 1px solid black;
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    font-size: 10rem;
+    background-image: url("images/day.jpg"); 
+    animation: backgroundChange 2s ease-in-out 2s forwards;
+ }
+
+ 
+
+
+ @keyframes backgroundChange {
+
+    0% {
+        
+
+        color: black;
+        text-shadow: 15px 15px 10px;
+        
+        gap:0px;
+        text-decoration: blue;
+ 
+
+    }
+
+    100% {
+ 
+        background-image: url("images/night2.jpg");
+        color: white;
+        text-shadow: 15px 15px 10px white;
+        
+        gap: 1000px;
+     
+        
+       
+     }
+    
+ }

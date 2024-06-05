@@ -1,0 +1,33 @@
+*{
+    background-color: lightblue;
+    border: 2p solid black;
+    width: 90vw;
+    height: 90vh;
+}
+
+.container {
+    width: 50vw;
+    height:50vh;
+    border: 1px solid black;
+    display:flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin: auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    font-size: 20px;
+     
+}
+
+.randomNumber {
+    width: 100vw;
+    height: 20px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 0px 0px 10px 10px ;
+    background-color: rgb(248, 106, 106);
+    color: white;
+    
+}
