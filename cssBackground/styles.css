@@ -57,7 +57,7 @@ body {
         color: black;
         text-shadow: 15px 15px 10px;
         text-decoration: blue;
-       background:transparent;
+       opacity: .5;
     }
 
 15% {
