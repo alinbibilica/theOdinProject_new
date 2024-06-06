@@ -12,13 +12,21 @@ body {
 
 .container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center ;
     max-width: 100vw;
     max-height: 100vh;
     /* overflow: hidden; */
     font-size: 62.5%;
+     
  
+}
+
+.audio {
+    background:transparent;
+    position:absolute;
+    top:  70px;
 }
 
 .text {
@@ -36,7 +44,7 @@ body {
     justify-content: center;
     background-size:auto;
     background-image: url("images/day.jpg"); 
-    animation: backgroundChange 3s ease-in-out 2s forwards;
+    animation: backgroundChange 20s ease-in-out  infinite; ; /* forwards*/
  }
 
  
@@ -50,13 +58,15 @@ body {
         text-decoration: blue;
        
     }
-
-    100% {
- 
+    50% {
         background-image: url("images/night2.jpg");
+        color: rgb(180, 163, 163);
+        text-shadow: 15px 15px 10px white;
+    }
+    100% {
+        background-image: url("images/night3.jpg");
         color: white;
         text-shadow: 15px 15px 10px white;
-        justify-content: space-around;
         }
     }
 
