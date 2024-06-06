@@ -57,6 +57,13 @@ body {
         color: black;
         text-shadow: 15px 15px 10px;
         text-decoration: blue;
+       background:transparent;
+    }
+
+15% {
+        color: black;
+        text-shadow: 15px 15px 10px;
+        text-decoration: blue;
        
     }
     50% {
@@ -64,11 +71,18 @@ body {
         color: rgb(180, 163, 163);
         text-shadow: 15px 15px 10px white;
     }
-    100% {
+    90% {
         background-image: url("images/night3.jpg");
         color: white;
         text-shadow: 15px 15px 10px white;
         }
+100% {
+        background-image: url("images/night3.jpg");
+        color: white;
+        text-shadow: 15px 15px 10px white;
+background:transparent;
+        }
+
     }
 
  
