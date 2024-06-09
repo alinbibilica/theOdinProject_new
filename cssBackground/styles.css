@@ -30,11 +30,12 @@ body {
 }
 
 .text {
-    font-size: 5rem;
+    font-size: 5em;
 }
 
  .box {
     display: flex;
+    flex-direction: column;
     border: 1px solid black;
     width: 100vw;
     height: 100vh;
@@ -42,9 +43,10 @@ body {
     max-height: 100vh;
     align-items: center;
     justify-content: center;
-    background-size:auto;
+    background-size:cover;
     background-image: url("images/day.jpg"); 
     animation: backgroundChange 20s ease-in-out  infinite; ; /* forwards*/
+    
  }
 
  
@@ -56,17 +58,37 @@ body {
         color: black;
         text-shadow: 15px 15px 10px;
         text-decoration: blue;
-       
+        opacity: 0;
     }
+
+    15% {
+        color: black;
+        text-shadow: 15px 15px 10px;
+        text-decoration: blue;
+        opacity: 1;
+
+    }
+
     50% {
         background-image: url("images/night2.jpg");
         color: rgb(180, 163, 163);
         text-shadow: 15px 15px 10px white;
+        opacity: 1;
+
     }
+
+    80% {
+        background-image: url("images/night3.jpg");
+        color: white;
+        text-shadow: 15px 15px 10px white;
+        opacity: 1;
+        }
+
     100% {
         background-image: url("images/night3.jpg");
         color: white;
         text-shadow: 15px 15px 10px white;
+        opacity: 0;
         }
     }
 
