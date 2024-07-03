@@ -62,7 +62,7 @@
     background-color:rgba(238, 189, 189, .7);
     
     border: 1px solid black;
-    overflow: hidden;
+    overflow: hidden visible;
     align-items: center;
     justify-content: center ;
  }
