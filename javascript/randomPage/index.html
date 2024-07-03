@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="mainHeader"><h1>The randomizer!</h1></div>
+        </header>
+
+
+
+        <div class="content">
+
+        <div class="controls">
+            <h3>This page will help you generate random text/number: 
+                <details>Use the following controls to get the expected results.</details>
+            </h3>
+            
+
+            <div class="genLength"> 
+                <label for="genLength">Length of generated number: </label>
+                <input type="text" id="genLength" required minlength="1" maxlength="2" size="5">
+            </div>
+
+            <div class="genNumbers">
+                <label for="genNumbers">How many lines you want to generate? </label>
+                <input type="text" id="genNumbers"  required minlength="1" maxlength="2" size="5">
+            </div>
+
+            <button type="button" id="button" class="buttonSize">Submit!</button>
+            <button type="button" id="clear" class = "buttonSize">Clear Results!</button>
+
+
+        </div>
+
+
+        <div class="results">
+            <div class="generatedList">
+                    <p id="list"> Empty </p>
+                 
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>
