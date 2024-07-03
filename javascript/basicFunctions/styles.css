@@ -19,7 +19,7 @@
 
 #square {
     width: 100vw;
-    height: 100vh;
+    height: 70vh;
     border: 1px solid black;
     /* border-radius: 50px 50px; */
     overflow: hidden;
@@ -46,4 +46,10 @@
     border-radius: 40px 40px 40px 40px;
     /* padding-top: -20px; */
     margin-top: 20px;
+}
+
+.generate {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
