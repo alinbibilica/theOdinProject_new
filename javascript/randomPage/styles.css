@@ -9,7 +9,9 @@
     width: 100vw;
     border: 2px solid rgb(5, 22, 255);
      background-image: url('background.jpg');
-     background-size: contain;
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
      display: flex;
      flex-direction: column;
      gap: 20px;
