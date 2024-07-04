@@ -10,6 +10,8 @@
     <div class="container">
         <header class="header">
             <div class="mainHeader"><h1>The randomizer!</h1></div>
+            <h4>This page will help you generate random strings:    </h4>           
+            <details>Use the following controls to get the expected results. (more features to come)</details>
         </header>
 
 
@@ -17,23 +19,41 @@
         <div class="content">
 
         <div class="controls">
-            <h3>This page will help you generate random strings: 
-                <details>Use the following controls to get the expected results. (more features to come)</details>
-            </h3>
-            
+           <div class="intro">Change the specs of the generated strings using the following controls:</div>
+
+
+           <div class="checkboxes">
+            <div>
+                <input type="checkbox" id="letters" name="letters" checked />
+                <label for="letters">Letters</label>
+              </div>
+
+            <div>
+                <input type="checkbox" id="numbers" name="numbers" checked />
+                <label for="numbers">Numbers</label>
+              </div>
+
+            <div>
+                <input type="checkbox" id="specialCharacters" name="specialCharacters" checked />
+                <label for="specialCharacters">Simbols</label>
+              </div>
+
+           </div>
+
 
             <div class="genLength"> 
-                <label for="genLength">Length of generated strings: </label>
-                <input type="text" id="genLength" required minlength="1" maxlength="2" size="5">
+                <label for="genLength">Length: </label>
+                <input type="text" id="genLength" required minlength="1" maxlength="2" size="3" value="8">
             </div>
 
             <div class="genNumbers">
-                <label for="genNumbers">How many strings would you like to generate? </label>
-                <input type="text" id="genNumbers"  required minlength="1" maxlength="2" size="5">
+                <label for="genNumbers">How many? </label>
+                <input type="text" id="genNumbers"  required minlength="1" maxlength="2" size="3" value="10">
             </div>
-
-            <button type="button" id="button" class="buttonSize">Submit!</button>
+            
+            <div class="actionButton"> <button type="button" id="button" class="buttonSize">Submit!</button>
             <button type="button" id="clear" class = "buttonSize">Clear Results!</button>
+            </div>
 
 
         </div>

@@ -16,6 +16,8 @@
      flex-direction: column;
      gap: 20px;
      overflow: hidden;
+     align-items: center;
+     justify-content: center ;
 }
 
 .content {
@@ -26,7 +28,8 @@
 }
 
  .header {
-    height: 10vh;
+     
+    height: max-content;
     width: 100vw;
     background-color: rgba(210, 105, 30, .95);
     text-align: center;
@@ -36,21 +39,22 @@
  .controls {
     display: flex;
     flex-direction: column;
+    max-height: 70vh;
     height: max-content;
-    width: 40vw;
+    width: max-content;
+    max-width: 50vw;
     background-color:rgba(238, 189, 189, .7);
     border: 1px solid black;
-    gap: 10px;
-    align-items: center;
+    gap: 20px;
+    align-items: flex-start;
     justify-content: center;
     padding: 20px;
  }
-.controls h3 {
-    border: 1px solid black;
-    margin-bottom: 50px;;
-    padding: 10px;
-    background-color: white;
-     
+ 
+ 
+
+.intro{
+ border: 1px solid white;
 }
 
 
