@@ -10,7 +10,7 @@ const lettersType = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o'
 const numbersType = ['0','1','2','3','4','5','6','7','8','9'];
 const symbolsType = ['!','@','#','$','%','^','&','*','(',')','?'];
 
-let list = document.getElementById("list");
+ 
 
 let length = "";
 let numberOfLines = "";
@@ -30,7 +30,7 @@ let caractere = [];
     // alert("the number of generated line is:" + numberOfLines);
 });
 
-
+ 
  
 function setStringType(){
 
@@ -57,6 +57,10 @@ function setStringType(){
             else if (checkLetters.checked == false && checkNumbers.checked == true && checkSymbols.checked == false){
                 caractere = [];
                 caractere = caractere.concat(numbersType);
+              }
+            else if (checkLetters.checked == true && checkNumbers.checked == false && checkSymbols.checked == true){
+                caractere = [];
+                caractere = caractere.concat(lettersType, symbolsType);
               }
               else {
                 caractere = null;
