@@ -45,7 +45,7 @@ function getRandomInt(max){
 function getHumanChoise(){
 
     
-    let humanChoice1 = prompt("Enter your choice: 'rock' 'paper' or 'scissor'");
+    let humanChoice1 = prompt(`"Enter your choice: 'rock' 'paper' or 'scissor'" Human=${humanScore} Computer=${computerScore}`);
         
         return humanChoice1;
  
@@ -119,19 +119,19 @@ function playGame(){
  
        
     if(humanScore == 3 && computerScore<=3) {
-    alert("Game Over! Human won!");
+    alert(`"Game Over! Human won!"  Human=${humanScore} Computer=${computerScore}`);
         humanScore=0;
         computerScore=0;
         }
 
     else if(humanScore <= 3 && computerScore == 3){
-        alert("Game over! Computer WON!");
+        alert(`"Game over! Computer WON!" Human=${humanScore} Computer=${computerScore}`);
         humanScore=0;
         computerScore=0;
     }
     else if (humanScore == 3 && computerScore == 3){
      
-        alert("it`s a tie!");
+        alert(`"it's a tie!" Human=${humanScore} Computer=${computerScore}`);
 
         }}
 
