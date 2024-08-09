@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100vw;
+    height: auto;
+    /* background-color: rgb(241, 157, 157); */
+    padding-top: 30px;;
+     
+}
+
+.header{
+    display: flex;
+    border: 1px solid black;
+    max-width: 100vw;
+    text-align: center ;
+    height: auto;
+    justify-content: center;
+    padding: 10px;
+   
+}
+
+ 
+
+.clickToPlay{
+    border: 1px solid black;
+    margin-top: 20px;
+    background-color: red;
+    color:white;
+    font-size: larger;
+    padding: 5px;
+    max-width: 100vw;
+}
+
+.humanChoice {
+    display: flex;
+    gap:20px;
+    border: 1px solid black;
+    padding: 2px;
+    margin-top:20px;
+    /* width: 50vw; */
+    max-width: 100vw;
+    justify-content: space-around;
+    height: 10vh;
+   align-items: center;
+ 
+     
+}
+
+.humanChoice > :nth-child(-n+3)  {
+    border: 1px solid black;
+    width: 30%;
+    text-align: center;
+    padding: 10px;
+}
+
+.score{
+    display: flex;border: 1px solid black;
+    max-width: 100vw;
+    text-align: center;
+    justify-content: center;
+    gap:25px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.score > :nth-child(-n+2){
+    border:2px solid black;
+    padding: 10px;
+}

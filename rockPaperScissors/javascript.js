@@ -2,8 +2,8 @@ const log = console.log;
 
 let humanScore = 0;
 let computerScore = 0;
-
-
+const playButton = document.getElementById("clickToPlay");
+let counter = 0;
 
 function getComputerChoice(){
 
@@ -37,17 +37,33 @@ function getRandomInt(max){
 }
 
 
-function getHumanChoise(){
-    
-    let humanChoise = prompt('Enter "rock" , "paper" or "scissors"');
 
-    return humanChoise;
+
+
+
+
+function getHumanChoise(){
+
+    
+    let humanChoice1 = prompt("Enter your choice: 'rock' 'paper' or 'scissor'");
+        
+        return humanChoice1;
+ 
+ 
 }
+
+
+
+
+
+
 
 
 function playRound(human, computer){
     log(human);
     log(computer);
+
+  
 
     let result;
 
@@ -85,34 +101,58 @@ function playRound(human, computer){
         computerScore++
         return result = log(`'Computer won' + 'Human score:' ${humanScore} + 'Computer score:' ${computerScore}`);
     }
-
+    
 
 }
+ 
+// playRound(getHumanChoise(), getComputerChoice());
+// // playButton.addEventListener("click",playGame);
 
-
-
+ 
 
 function playGame(){
-
-
-
-        while(humanScore<3 || computerScore<3){
-
-
-            playRound(getHumanChoise(), getComputerChoice());
-
+    while(true){
+    if (humanScore <= 3 || computerScore <= 3){
+    
+    playRound(getHumanChoise(), getComputerChoice());
+        
+ 
+       
+    if(humanScore == 3 && computerScore<=3) {
+    alert("Game Over! Human won!");
+        humanScore=0;
+        computerScore=0;
         }
 
+    else if(humanScore <= 3 && computerScore == 3){
+        alert("Game over! Computer WON!");
+        humanScore=0;
+        computerScore=0;
+    }
+    else if (humanScore == 3 && computerScore == 3){
+     
+        alert("it`s a tie!");
 
-}
+        }}
+
+    else if(humanScore >3 || computerScore > 3){
+        humanScore = 0;
+        computerScore = 0;
+        }
+    }
+    }
 
 
-function wannaPlay()
-        {
+ 
+ 
+playGame();
 
-            let wannaPlay = prompt
+// function wannaPlay()
+//         {
 
-}
-//playGame();
+//             let wannaPlay = prompt
+
+// }
+// playGame();
 // log(getComputerChoice());
 // log(`"human choise:"  ${getHumanChoise()}`);
