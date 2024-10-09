@@ -1,0 +1,24 @@
+
+* {
+    background-color: blue;
+}
+
+ .container {
+    width: 50vw;
+    height: 50vh;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+     justify-content: center ;
+ }
+
+ h1{
+    background-color: yellow;
+    display:flex;
+     overflow-wrap:anywhere;
+ 
+    width: 40vw;
+    height: auto;
+    
+    
+ }
