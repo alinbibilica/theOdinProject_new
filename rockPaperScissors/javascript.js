@@ -101,6 +101,7 @@ function playRound(human, computer){
         computerScore++
         return result = log(`'Computer won' + 'Human score:' ${humanScore} + 'Computer score:' ${computerScore}`);
     }
+    else return 0;
     
 
 }

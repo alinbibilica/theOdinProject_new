@@ -25,8 +25,6 @@ function checkAge(){
                 flag = false;
         }
 }
-    
-
 function playMusic(flag){
 
     if(flag === true){
