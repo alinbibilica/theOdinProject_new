@@ -1,3 +1,8 @@
+/*
+cautare in lista de contacte si countdown
+
+*/
+
 const contacte = [
     "Cristina:23459995783",
     "Andreea:28764766791",
@@ -11,6 +16,24 @@ const contacte = [
 const para = document.querySelector("p");
 const input = document.querySelector("input");
 const btn = document.querySelector("button");
+
+
+/* variable pentru countdown */
+let i = 10;
+ const output = document.querySelector('.output');
+ output.textContent = "";
+    
+    
+
+    while(i>=0){
+        const para1 = document.createElement('p');
+        if(i===10){para1.textContent = `Countdown ${i}`;}
+        else if(i===0){para1.textContent=`BlastOff ${i}`;}
+        else {para1.textContent = i;}
+        output.appendChild(para1);
+        i--;
+    }
+
 
 
 btn.addEventListener("click", ()=>{
