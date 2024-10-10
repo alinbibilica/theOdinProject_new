@@ -4,21 +4,37 @@
 }
 
  .container {
-    width: 50vw;
-    height: 50vh;
+    width: 100vw;
+    height: auto;
     background-color: white;
     display: flex;
     flex-wrap: wrap;
      justify-content: center ;
+     margin-top: 10px;
+     gap: 10px;
  }
 
  h1{
     background-color: yellow;
     display:flex;
-     overflow-wrap:anywhere;
- 
+    flex-direction: column;
+     /* overflow-wrap:anywhere; */
+     text-align: center;
+     color: white;
     width: 40vw;
     height: auto;
+    gap: 3px;
     
     
+ }
+
+ h2 {
+    background-color: lightgreen;
+    gap: 3px;
+    width: 40vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
  }
