@@ -25,4 +25,26 @@ const oldest = person.reduce((oldest, year) => year.dob < oldest.dob ? year : ol
 console.log(old);
  
 
+const container = document.querySelector('#container');
+
+const display = container.firstElementChild;
+
+person.forEach( person => {
+    const divider = document.createElement("h2");
+    const divider1 = document.createElement("h1");
+    divider.innerText = person.firstName.toUpperCase() + " who is " + person.age + " drives a " + person.carOwned.toLowerCase();
+    divider.style.cssText = "color: blue; background: lightyellow; text-align: center; font-size: 1.5rem; border: 1px solid black; padding: 20px; margin: 20px; ";
+    divider1.textContent = person.dob;
+    divider1.innerHTML+="<span>Hello World!</span>";
+    container.appendChild(divider1);
+    container.appendChild(divider);
+})
+
+
+ container.removeChild(display);
+
+ container.classList.add("containerNou");
+
+console.log(container);
+
  
