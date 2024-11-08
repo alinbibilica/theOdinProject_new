@@ -1,0 +1,15 @@
+ 
+*{
+    margin: 0;
+}
+ .container {
+    width: auto;
+    height: 90vh;
+    
+ }
+
+ .text {
+    text-align: center;
+    padding:2px;
+    font-size: 2rem;
+ }
