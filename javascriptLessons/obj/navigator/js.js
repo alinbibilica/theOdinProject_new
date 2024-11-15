@@ -8,6 +8,8 @@ const browser = navigator;
 const vibrateButton = document.getElementById('vibrationButton');
 const ipValue = document.createElement('li');
 const closeButton = document.getElementById("closeButton");
+const google = document.querySelector('#googleButton');
+
 
 ipValue.textContent = `IpAddress: ${getIP()}`;
 userAgent.textContent = `User-Agent: ${browser.userAgent}`;
@@ -15,6 +17,12 @@ language.textContent =  `BrowserLanguage: ${navigator.language}`;
 online.textContent =    `OnlineStatus: ${navigator.onLine?'Connected':'Disconnected'}`;
 vibrate.textContent = "Click button to vibrate";
 
+google.textContent = "Go to: Google";
+ 
+google.addEventListener('click', openGoogle);
+
+ 
+ 
  oList.appendChild(userAgent);
  oList.appendChild(language);
  oList.appendChild(online);
@@ -23,12 +31,21 @@ vibrate.textContent = "Click button to vibrate";
 
  vibrateButton.addEventListener('click',vibrate1);
  vibrateButton.addEventListener('click',vibrateOnOff);
+ vibrateButton.addEventListener('click', removeitems);
 
  closeButton.addEventListener('click', close1);
 
  getIP();
 
+function removeitems(){
+    online.remove();
+    language.remove();
+}
 
+
+function openGoogle(){
+    window.open("https://www.google.com" );
+}
 function close1()
 {
     window.close();
