@@ -10,7 +10,7 @@ const vibrateButton = document.getElementById('vibrationButton');
 userAgent.textContent = `User-Agent: ${browser.userAgent}`;
 language.textContent =  `NetworkInfo: ${navigator.language}`;
 online.textContent =    `OnlineStatus: ${navigator.onLine?'Connected':'Disconnected'}`;
-vibrate.textContent = "ON";
+vibrate.textContent = "Click button to vibrate";
  oList.appendChild(userAgent);
  oList.appendChild(language);
  oList.appendChild(online);
@@ -25,11 +25,7 @@ vibrate.textContent = "ON";
   }
 
   function vibrateOnOff(){
-    if(vibrate.textContent == "OFF"){
-        vibrate.textContent = "ON";
-        
-    }
-    else if(vibrate.textContent == "ON") {vibrate.textContent = "OFF";}
+    vibrate.textContent ="SOS vibration pattern";
+    vibrate.style.cssText = "background: red; color:black;";
 
-    oList.appendChild(vibrate);
   }
