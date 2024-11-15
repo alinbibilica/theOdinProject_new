@@ -11,7 +11,7 @@ const closeButton = document.getElementById("closeButton");
 
 ipValue.textContent = `IpAddress: ${getIP()}`;
 userAgent.textContent = `User-Agent: ${browser.userAgent}`;
-language.textContent =  `NetworkInfo: ${navigator.language}`;
+language.textContent =  `BrowserLanguage: ${navigator.language}`;
 online.textContent =    `OnlineStatus: ${navigator.onLine?'Connected':'Disconnected'}`;
 vibrate.textContent = "Click button to vibrate";
 
