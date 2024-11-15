@@ -1,13 +1,31 @@
-.container{
-    width: 90vw;
-    height:90vh;
-    background-color: green;
-    color: white;
-    font-weight: strong;
-    font-size: 1rem;
+
+.outer-container{
+    display: flex;
+    
+    height: 100vh;
+    max-width: 100vw;
+    margin: auto;
+    border: 1px solid black;
+    background: right url("\\6017768.jpg");
 }
 
-#vibrationButton{
+.container{
+    height: fit-content;
+    background-color: rgb(32, 39, 32);
+    color: rgb(255, 255, 255);
+    font-weight: strong;
+    font-size: 1rem;
+    display:flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 100vw;
+    margin: 20px;
+    
+
+}
+
+#vibrationButton, #closeButton{
     width: 20vw;
     margin-left: 25px;
+    margin: 10px;
 }
