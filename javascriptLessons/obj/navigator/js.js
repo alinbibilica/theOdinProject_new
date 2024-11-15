@@ -18,6 +18,10 @@ vibrate.textContent = `Vibrate: ${navigator.vibrate([
  oList.appendChild(online);
  oList.appendChild(vibrate);
 
- vibrateButton.addEventListener('click', navigator.vibrate([
-    100, 30, 100, 30, 100, 30, 200, 30, 200, 30, 200, 30, 100, 30, 100, 30, 100,
-  ]));
+ vibrateButton.addEventListener('click',vibrate);
+
+  function vibrate(){
+     navigator.vibrate([
+        100, 30, 100, 30, 100, 30, 200, 30, 200, 30, 200, 30, 100, 30, 100, 30, 100,
+      ]);
+  }
