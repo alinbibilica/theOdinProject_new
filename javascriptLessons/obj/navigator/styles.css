@@ -5,6 +5,9 @@
     color: white;
     font-weight: strong;
     font-size: 2rem;
-    
-    
+}
+
+#vibrationButton{
+    width: 20vw;
+    margin-left: 25px;
 }
