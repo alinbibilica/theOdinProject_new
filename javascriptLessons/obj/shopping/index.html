@@ -20,7 +20,7 @@
 
     <h1>My shopping list</h1>
 
-    <div>
+    <div id="divContainer">
       <label for="item">Enter a new item:</label>
       <input type="text" name="item" id="item">
       <button id="addButton">Add item</button>
@@ -34,8 +34,21 @@
         let item = document.querySelector('ul');
         let userInput = document.getElementById("item");
         let button = document.getElementById("addButton");
+        let divContainer =document.querySelector('h1');
+        let fontSize = divContainer.style.fontSize = 10;
+       
 
-   
+      document.addEventListener("keydown", (event)=>{
+        console.log(`the key pressed is: ${event.key} and fontSize value is: ${fontSize}`);
+
+        if(event.key == 'ArrowDown'){
+            fontSize -=1;
+        }
+        else if(event.key == 'ArrowUp'){
+            fontSize +=1;
+        }
+        divContainer.style.fontSize = `${fontSize}px`;
+      })
 
         button.addEventListener('click', getValue);
 
