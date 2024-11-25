@@ -1,7 +1,7 @@
 .container {
     width: 90vw;
     height: 90vh;
-    border: 1px solid black;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,7 +16,7 @@
 
     height: 150px;
     width: auto;
-    border: 1px solid black;
+    
      
     border-radius: 20px 20px 0px 0px;
     background-position: center; /* Center the image */
@@ -28,4 +28,5 @@
     width: 100px;
     height: auto;
     transform: rotate(90deg);
+    border-radius: 20px 0px 0px 20px;
 }
