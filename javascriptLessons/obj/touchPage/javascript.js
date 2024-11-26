@@ -1,4 +1,5 @@
 
+let container = document.querySelector(".container");
 
 function update(event){
 
@@ -15,10 +16,10 @@ function update(event){
         document.body.appendChild(dot);
         
     }
-    event.preventDefault();
-}
+ }
 
 window.addEventListener('touchstart', update);
 window.addEventListener('touchmove', update);
 window.addEventListener('touchend', update);
-window.addEventListener('mousedown', update);
+window.addEventListener('click', update);
+ 
