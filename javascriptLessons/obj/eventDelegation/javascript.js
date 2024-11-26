@@ -25,15 +25,46 @@ header.addEventListener('click', (event)=>{
                                 event.target.style.textAlign = "center";
                                 break;
             
-            default:  
+            default:   
             event.target.classList.toggle("notclicked");
+            addText ();
+            break;
+          
             
 
-
     }
-
-
-
+         
 });
 
- 
+window.addEventListener('click', event =>{
+    console.log(event.target.id);
+});
+
+
+window.addEventListener('keydown', event =>{
+
+    if(event.key == "b" && event.ctrlKey){
+        document.body.style.background = "blue";
+    }
+    if(event.key == "g" && event.ctrlKey){
+        document.body.style.background = "green";
+    }
+    if(event.key == "y" && event.ctrlKey){
+        document.body.style.background = "yellow";
+    }
+    if(event.key == "r" && event.ctrlKey){
+        document.body.style.background = "red";
+    }
+    if(event.key == "B" && event.ctrlKey){
+        document.body.style.background = "black";
+    }
+
+})
+
+
+function addText (){
+    text.textContent = "Click to show menu";
+    text.style.color = "white";
+    header.appendChild(text);
+   
+}
