@@ -11,10 +11,24 @@
 dot {
     position: absolute;
     display: block;
-    border: 2px solid red;
-    border-radius: 50px;
-    height: 100px;
+    
+    
+   
+    --c: red;
     width: 100px;
-}
+    aspect-ratio: 1;
+    background:
+     radial-gradient(at 70% 31%,var(--c) 29%,#0000 30%),
+     radial-gradient(at 30% 31%,var(--c) 29%,#0000 30%),
+     conic-gradient(from -45deg at 50% 84%,var(--c) 90deg,#0000 0) 
+      bottom/100% 50% no-repeat;
+
+      animation: fly-up ease-in-out  2s infinite;
+
+    }
 
  
+    @keyframes fly-up{
+        from{transform: translateY(0);}
+        to {transform: translateY(-100vw);}
+    }
