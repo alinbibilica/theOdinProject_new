@@ -13,7 +13,9 @@ function update(event){
         dot.style.left = (pageX - 50) + "px";
         dot.style.top = (pageY - 50) + "px";
         document.body.appendChild(dot);
+        
     }
+    event.preventDefault();
 }
 
 window.addEventListener('touchstart', update);
