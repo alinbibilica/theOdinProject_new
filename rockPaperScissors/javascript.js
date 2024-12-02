@@ -1,159 +1,194 @@
-// const log = console.log;
+
+
+let rock = document.getElementById("rock");
+let paper = document.getElementById("paper");
+let scissor = document.getElementById("scissor");
+
+let humanChoice = document.querySelector("#humanChoice");
+let humanScore = document.querySelector(".human");
+let ComputerScore = document.querySelector(".computer");
+
+let humanPoints = '';
+let Pcpoints = '';
+
+ 
+let PC = getComputerChoice();
+
+
+let RoundCounter = document.querySelector(".roundNumber");
+let HumanPointsResult = document.querySelector(".HumanPoints");
+let ComputerPointsResult = document.querySelector(".ComputerPoints");
+let counter = '0';
+
+
+let prompt = document.querySelector(".points");
+let result = document.createElement("div");
+
+
+humanChoice.addEventListener("click", (e)=>{
+        
+        let target = e.target;
+         
+        
+        let Human = target.id;
+        let Computer = getComputerChoice();
+
+        playRound(Human, Computer, humanScore, ComputerScore, RoundCounter, HumanPointsResult,ComputerPointsResult );
+        
+        chooseWinner(counter, humanPoints, Pcpoints, RoundCounter, HumanPointsResult, ComputerPointsResult);
+        
+        
+    });
+
+    
+    
+ function clearScore(){
+    counter = 0;
+    humanPoints = 0;
+    Pcpoints = 0;
+    HumanPointsResult.textContent = `Human points:`;
+    ComputerPointsResult.textContent = `Computer points:`;
+    result.textContent =" "; 
+     
+ }
+ 
+ 
 
 // let humanScore = 0;
 // let computerScore = 0;
 // const playButton = document.getElementById("clickToPlay");
 // let counter = 0;
 
-// function getComputerChoice(){
 
-//         // o => rock
-//         // 1 => paper
-//         // 2 => scissors
-//         //return rock paper or scissors
 
-//         let randomNumber = getRandomInt(3) +1 ; //return an int from 1 to 3
-//         log(randomNumber);  //log random number
 
-//         let computerChoice;
+function getComputerChoice(){
 
-//         if(randomNumber == 1){
-//             computerChoice = "rock";
-//         }
+        // o => rock
+        // 1 => paper
+        // 2 => scissors
+        //return rock paper or scissors
 
-//         else if (randomNumber == 2) {
-//             computerChoice = "paper";
-//         }
+        let randomNumber = getRandomInt(3) +1 ; //return an int from 1 to 3
         
-//         else
-//             computerChoice = "scissors";
-    
-//         return computerChoice;
-// }
 
+        let computerChoice;
 
-// function getRandomInt(max){
-//     return Math.floor(Math.random()*max);
-// }
+        if(randomNumber == 1){
+            computerChoice = "rock";
+        }
 
-
-
-
-
-
-
-// function getHumanChoise(){
-
-    
-//     let humanChoice1 = prompt(`"Enter your choice: 'rock' 'paper' or 'scissor'" Human=${humanScore} Computer=${computerScore}`);
+        else if (randomNumber == 2) {
+            computerChoice = "paper";
+        }
         
-//         return humanChoice1;
- 
- 
-// }
-
-
-
-
-
-
-
-
-// function playRound(human, computer){
-//     log(human);
-//     log(computer);
-
-  
-
-//     let result;
-
-//     if((human == "rock" && computer == "rock") || (human == "paper" && computer == "paper") || (human == "scissors" && computer == "scissors")){
-//         return result = log('its a tie');
-        
-//     }
-
-//     else if (human == "rock" && computer == "scissors"){
-//         humanScore++;
-//         return result = log(`'Human won' + 'Human score:' ${humanScore} + 'Computer score:' ${computerScore}`);
-//     }
-
-//     else if (human == "paper" && computer == "rock"){
-//         humanScore++;
-//         return result = log(`'Human won' + 'Human score:' ${humanScore} + 'Computer score:' ${computerScore}`);
-//     }
-
-//     else if (human == "scissors" && computer == "paper"){
-//         humanScore++;
-//         return result = log(`'Human won' + 'Human score:' ${humanScore} + 'Computer score:' ${computerScore}`);
-//     }
-
-//     else if (computer == "rock" && human == "scissors"){
-//         computerScore++
-//         return result = log(`'Computer won' + 'Human score:' ${humanScore} + 'Computer score:' ${computerScore}`);
-//     }
-
-//     else if (computer == "paper" && human == "rock"){
-//         computerScore++
-//         return result = log(`'Computer won' + 'Human score:' ${humanScore} + 'Computer score:' ${computerScore}`);
-//     }
-
-//     else if (computer == "scissors" && human == "paper"){
-//         computerScore++
-//         return result = log(`'Computer won' + 'Human score:' ${humanScore} + 'Computer score:' ${computerScore}`);
-//     }
-//     else return 0;
-    
-
-// }
- 
-// // playRound(getHumanChoise(), getComputerChoice());
-// // // playButton.addEventListener("click",playGame);
-
- 
-
-// function playGame(){
-//     while(true){
-//     if (humanScore <= 3 || computerScore <= 3){
-    
-//     playRound(getHumanChoise(), getComputerChoice());
-        
- 
-       
-//     if(humanScore == 3 && computerScore<=3) {
-//     alert(`"Game Over! Human won!"  Human=${humanScore} Computer=${computerScore}`);
-//         humanScore=0;
-//         computerScore=0;
-//         }
-
-//     else if(humanScore <= 3 && computerScore == 3){
-//         alert(`"Game over! Computer WON!" Human=${humanScore} Computer=${computerScore}`);
-//         humanScore=0;
-//         computerScore=0;
-//     }
-//     else if (humanScore == 3 && computerScore == 3){
+        else
+            computerChoice = "scissors";
      
-//         alert(`"it's a tie!" Human=${humanScore} Computer=${computerScore}`);
+        return computerChoice;
+};
 
-//         }}
 
-//     else if(humanScore >3 || computerScore > 3){
-//         humanScore = 0;
-//         computerScore = 0;
-//         }
-//     }
-//     }
+//function needed to get a random number from 1 to 3 for the computer choice
+function getRandomInt(max){
+    return Math.floor(Math.random()*max);
+};
+
 
 
  
+
+
+
+
+
+
+
+
+
+
+function playRound(human, computer, humanResult, ComputerResult, roundCounter, humanPresult, computerPresult){
+     
+    let result;
+    humanResult.textContent = `Your choice: ${human}`;
+    ComputerResult.textContent = `Computer choice: ${computer}`;
+    counter++;
+    roundCounter.textContent = `Round: ${counter}`;
+    
+     
+
+    if((human == "rock" && computer == "rock") || (human == "paper" && computer == "paper") || (human == "scissors" && computer == "scissors")){
+        return humanPoints && Pcpoints;
+        
+    }
+
+    else if (human == "rock" && computer == "scissors"){
+        humanPoints++;
+        humanPresult.textContent = `Human Points: ${humanPoints}`;
+    }
+
+    else if (human == "paper" && computer == "rock"){
+        humanPoints++;
+        humanPresult.textContent = `Human Points: ${humanPoints}`; 
+    }
+
+    else if (human == "scissors" && computer == "paper"){
+        humanPoints++;
+        humanPresult.textContent = `Human Points: ${humanPoints}`; 
+    }
+
+    else if (computer == "rock" && human == "scissors"){
+        Pcpoints++
+        computerPresult.textContent = `Computer Points: ${Pcpoints}`; 
+    }
+
+    else if (computer == "paper" && human == "rock"){
+        Pcpoints++
+        computerPresult.textContent = `Computer Points: ${Pcpoints}`; 
+    }
+
+    else if (computer == "scissors" && human == "paper"){
+        Pcpoints++
+        computerPresult.textContent = `Computer Points: ${Pcpoints}`; 
+    }
+    else 
+    
+    return 0;
+
+   
+};
+
+
+function chooseWinner(counter, humanPoints, PcPoints, roundNr, hPointsResult, cPointsResult){
+
+   
+     
+
+    if(counter == 5){
+        if(humanPoints>PcPoints){
+            
+    
+            result.textContent ="HUMAN WON!";
+            counter = '0';
+            humanPoints = '0';
+            PcPoints = '0';
+            result.classList.add("winner");
+        }
+        else if(PcPoints>humanPoints){
+          
+            result.textContent ="Computer WON!";
+            result.classList.add("winner");
+       
+           
+        }
+        prompt.appendChild(result);
+        
+    }
+    if(counter>5){
+        clearScore();
+    }
  
-// playGame();
+};
 
-// // function wannaPlay()
-// //         {
-
-// //             let wannaPlay = prompt
-
-// // }
-// // playGame();
-// // log(getComputerChoice());
-// // log(`"human choise:"  ${getHumanChoise()}`);
+ 
+ 
