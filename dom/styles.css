@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    max-width:100vw;
+    height: 100vh;
+    border: 3px dotted black;
+    background-color: lightblue;
+    display: flex;
+  align-items:center;
+  justify-content: space-around;
+  
+}
+
+.butoane{
+    width: 20px;
+    height: 100vh;
+    border:1px solid black;
+    display: flex;
+    align-items: center;
+}

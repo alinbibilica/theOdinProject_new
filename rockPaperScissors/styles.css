@@ -58,8 +58,14 @@
     justify-content: space-between;
     height: auto;
      align-items: center;
- 
      
+     
+}
+
+
+.transformChoice {
+    transform: scale(110%);
+    transition: all 2s linear;
 }
 
  #rock {

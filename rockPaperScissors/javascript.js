@@ -8,12 +8,12 @@ let humanChoice = document.querySelector("#humanChoice");
 let humanScore = document.querySelector(".human");
 let ComputerScore = document.querySelector(".computer");
 
-let humanPoints = '';
-let Pcpoints = '';
+let humanPoints = 0;
+let Pcpoints = 0;
 
  
 let PC = getComputerChoice();
-
+ 
 
 let RoundCounter = document.querySelector(".roundNumber");
 let HumanPointsResult = document.querySelector(".HumanPoints");
@@ -32,7 +32,8 @@ humanChoice.addEventListener("click", (e)=>{
         
         let Human = target.id;
         let Computer = getComputerChoice();
-
+         
+         
         playRound(Human, Computer, humanScore, ComputerScore, RoundCounter, HumanPointsResult,ComputerPointsResult );
         
         chooseWinner(counter, humanPoints, Pcpoints, RoundCounter, HumanPointsResult, ComputerPointsResult);
@@ -48,7 +49,7 @@ humanChoice.addEventListener("click", (e)=>{
     Pcpoints = 0;
     HumanPointsResult.textContent = `Human points:`;
     ComputerPointsResult.textContent = `Computer points:`;
-    result.textContent =" "; 
+    result.textContent =" --- "; 
      
  }
  
@@ -110,6 +111,7 @@ function getRandomInt(max){
 function playRound(human, computer, humanResult, ComputerResult, roundCounter, humanPresult, computerPresult){
      
     let result;
+     
     humanResult.textContent = `Your choice: ${human}`;
     ComputerResult.textContent = `Computer choice: ${computer}`;
     counter++;
@@ -177,6 +179,19 @@ function chooseWinner(counter, humanPoints, PcPoints, roundNr, hPointsResult, cP
         else if(PcPoints>humanPoints){
           
             result.textContent ="Computer WON!";
+            counter = '0';
+            humanPoints = '0';
+            PcPoints = '0';
+            result.classList.add("winner");
+       
+           
+        }
+        else if(PcPoints == humanPoints) {
+          
+            result.textContent ="it's a tie!";
+            counter = '0';
+            humanPoints = '0';
+            PcPoints = '0';
             result.classList.add("winner");
        
            
