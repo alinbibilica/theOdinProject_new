@@ -19,8 +19,11 @@ createElement();
  
 
 function createElement(){
+
+    
+
     rangeValue.addEventListener('click', ()=>{
-       
+        while(container.firstChild){ container.removeChild(container.firstChild)} //if a child of the container exists remove all of them begore creating new ones
         createColumns(sketchWidth, sketchHeight, container);
      });
 }
