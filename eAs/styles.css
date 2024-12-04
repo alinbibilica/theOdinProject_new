@@ -6,16 +6,37 @@
 
 
 .outContainer{
-    width: 100vw;
-    height: 100vh;
+    max-width: 80vw;
+    max-height: 80vh;
+    width: 50vw;
+    height:80vh;
     display: flex;
     flex-direction: column;
-    /* gap: 10px; */
+    gap: 10px;
     align-items: center;
     justify-content: center;
     background-color: rgb(231, 204, 204);
+    overflow:hidden ;
    
 }
+.comands {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px dotted black;
+}
+.title{
+    border: 1px solid black;
+   
+    padding: 5px 10px;
+}
+
+.rangeValue{ 
+    font-size: 2rem;
+    padding: 5px 10px;
+    width: fit-content;
+}
+
 .container {
     width: max-content;
     height: max-content;
@@ -26,6 +47,7 @@
     flex-direction: row;  
     gap:2px;
     background-color: rgb(236, 57, 45);
+     
     
 }
 
