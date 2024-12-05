@@ -3,7 +3,7 @@
 let container = document.querySelector(".container");
 let containerSize = container.getBoundingClientRect().width;
 let columns = document.querySelectorAll(".columns1");
-let divs = document.getElementsByClassName(".divs");
+let divs = document.querySelectorAll(".divs");
 let rangeValue = document.querySelector(".rangeValue");
 let slider = document.querySelector("input");
 
@@ -13,10 +13,16 @@ let sketchHeight = 20;
 
 setValue ();
 createElement();
-changeColor(divs);
+ 
 
+ container.addEventListener("mouseover", (e)=>{
+    let target = e.target;
+    if(target.classList='divs'){
+        target.style.background="black";
+    }
+ })
  
- 
+
 
 
 
@@ -28,6 +34,8 @@ function createElement(){
         while(container.firstChild){ container.removeChild(container.firstChild)} //if a child of the container exists remove all of them begore creating new ones
         createColumns(sketchWidth, sketchHeight, container);
      });
+
+   
 }
 
 
@@ -51,7 +59,7 @@ function createColumns(columns, rows, container1){
     
     }
 
-  
+    
 
 }
 
@@ -67,8 +75,5 @@ function setValue (){
     }
     
 
- function changeColor(divs){
-    divs.array.forEach(element => {
-        
-    });
- }
+ 
+ 
