@@ -1,8 +1,9 @@
 
 
 let container = document.querySelector(".container");
+let containerSize = container.getBoundingClientRect().width;
 let columns = document.querySelectorAll(".columns1");
-
+let divs = document.getElementsByClassName(".divs");
 let rangeValue = document.querySelector(".rangeValue");
 let slider = document.querySelector("input");
 
@@ -12,11 +13,12 @@ let sketchHeight = 20;
 
 setValue ();
 createElement();
-
-
+changeColor(divs);
 
  
  
+
+
 
 function createElement(){
 
@@ -31,7 +33,8 @@ function createElement(){
 
 function createColumns(columns, rows, container1){
     //number of divs
-    
+    let divWidth = containerSize / slider.value;
+
     for (let x =1; x<=columns;++x){
         let columns = document.createElement('div');
         columns.classList.add('columns1');
@@ -41,11 +44,16 @@ function createColumns(columns, rows, container1){
         for(let y =1; y<=rows; ++y){
             let rows = document.createElement('div');
             rows.classList.add('rows1', 'divs');
-            // rows.textContent +=y;
+            rows.style.width = `${divWidth}px`;
+            rows.style.height = `${divWidth}px`;
             columns.appendChild(rows);
         }
     
-    } }
+    }
+
+  
+
+}
 
 
 function setValue (){
@@ -59,4 +67,8 @@ function setValue (){
     }
     
 
- 
+ function changeColor(divs){
+    divs.array.forEach(element => {
+        
+    });
+ }
