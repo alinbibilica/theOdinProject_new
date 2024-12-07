@@ -1,78 +1,105 @@
 
 
 let container = document.querySelector(".container");
-let containerSize = container.getBoundingClientRect().width;
+let containerWidth = container.getBoundingClientRect().width;
+let containerHeight = container.getBoundingClientRect().height;
 let columns = document.querySelectorAll(".columns1");
 let divs = document.querySelectorAll(".divs");
 let rangeValue = document.querySelector(".rangeValue");
 let slider = document.querySelector("input");
+let chooseColor = document.getElementById("chooseColor");
 
-let sketchWidth = 20;
-let sketchHeight = 20;
+console.log(containerWidth);
+console.log(containerHeight);
+
 
 
 setValue ();
 createElement();
+color();
+
+  
+
+function color(){
+
+    console.log(chooseColor.value);
+    //to change the color of the divs we set an event listener on the container. and we check if the event class list value is equal with our class
+  container.addEventListener("mousemove", (event)=>{
+
+    let target = event.target;
+
+     if(target.classList.value == "rows1 divs"){target.style.backgroundColor =chooseColor.value}
+     
+  })
+}
+  
+    
+ 
  
 
- container.addEventListener("mouseover", (e)=>{
-    let target = e.target;
-    if(target.classList='divs'){
-        target.style.background="black";
-    }
- })
- 
+ function setValue (){
+
+    slider.addEventListener('mousemove', ()=>{
+        
+        rangeValue.textContent = `Submit(${slider.value}) `; 
+        sketchWidth = slider.value;
+        sketchHeight = slider.value;
+        console.log(sketchHeight);
+        console.log(sketchWidth);
+     })  
+   
+}
 
 
 
 
 function createElement(){
 
-    
+     
 
     rangeValue.addEventListener('click', ()=>{
-        while(container.firstChild){ container.removeChild(container.firstChild)} //if a child of the container exists remove all of them begore creating new ones
-        createColumns(sketchWidth, sketchHeight, container);
+        console.log(container);
+        while(container.childElementCount>0){container.removeChild(container.lastChild)}
+         createColumns(sketchWidth, sketchHeight, container);
      });
-
+     
    
 }
 
 
 function createColumns(columns, rows, container1){
     //number of divs
-    let divWidth = containerSize / slider.value;
+    let divWidth =  containerWidth / slider.value;
+    let divHeight = divWidth;
+
+    console.log("containerWidth:" + containerWidth);
+    console.log("columns" + columns);
+    console.log("rows:" + rows);
+    console.log("dv width" + divWidth);
 
     for (let x =1; x<=columns;++x){
         let columns = document.createElement('div');
         columns.classList.add('columns1');
-         
-        container1.appendChild(columns);  
+        columns.style.width = `${divWidth}px`;
+        container1.appendChild(columns);
+    
     
         for(let y =1; y<=rows; ++y){
             let rows = document.createElement('div');
             rows.classList.add('rows1', 'divs');
+            
+           
+            rows.style.height = `${divHeight}px`;
             rows.style.width = `${divWidth}px`;
-            rows.style.height = `${divWidth}px`;
             columns.appendChild(rows);
         }
-    
     }
-
     
+   
 
 }
 
 
-function setValue (){
-
-        slider.addEventListener('mousemove', ()=>{
-            
-            rangeValue.textContent = `Click(${slider.value}) `; 
-            sketchWidth = slider.value;
-            sketchHeight = slider.value;
-         })  
-    }
     
 
  
