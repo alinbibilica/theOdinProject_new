@@ -17,6 +17,30 @@ console.log(containerHeight);
 setValue ();
 createElement();
 color();
+brush();
+
+
+
+
+function brush(){
+
+    console.log(chooseColor.value);
+
+    //to change the color of the divs we set an event listener on the container. and we check if the event class list value is equal with our class
+  container.addEventListener("mousemove", (event)=>{
+    
+    let target = event.target;
+
+     if(target.classList.value == "rows1 divs"){
+        
+        target.style.backgroundImage ="url('images/brush.png')";
+         
+
+     }
+     
+  })
+}
+  
 
   
 

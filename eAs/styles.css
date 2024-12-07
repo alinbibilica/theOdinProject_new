@@ -83,6 +83,12 @@
     transition:all;
     transition-duration: 0.5s;
     border-radius: 50%;
+    /* background-image: url(images/brush.png); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-blend-mode: blue;
+    color: blue;
     /* border: 1px solid rgb(17, 17, 17); */
  }
  
