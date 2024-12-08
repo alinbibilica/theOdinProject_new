@@ -1,3 +1,14 @@
+ let topSide = document.getElementById('top-half');
+
+ topSide.addEventListener('touchstart', e=>{
+
+    e.preventDefault();
+    [...e.changedTouches].forEach(touch =>{
+        console.log(touch.target)
+    })
+
+ })
+ 
  document.addEventListener('touchstart', e=>{
 
    [...e.changedTouches].forEach(touch=>{

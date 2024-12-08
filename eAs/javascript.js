@@ -9,39 +9,29 @@ let rangeValue = document.querySelector(".rangeValue");
 let slider = document.querySelector("input");
 let chooseColor = document.getElementById("chooseColor");
 
-console.log(containerWidth);
-console.log(containerHeight);
+
 
 
 
 setValue ();
 createElement();
+ 
 color();
 brush();
-
+ 
 
 
 
 function brush(){
 
-    console.log(chooseColor.value);
-
     //to change the color of the divs we set an event listener on the container. and we check if the event class list value is equal with our class
-  container.addEventListener("mousemove", (event)=>{
-    
+  container.addEventListener("mousestart", (event)=>{
     let target = event.target;
-
      if(target.classList.value == "rows1 divs"){
-        
         target.style.backgroundImage ="url('images/brush.png')";
-         
-
      }
-     
   })
 }
-  
-
   
 
 function color(){
@@ -49,16 +39,12 @@ function color(){
     console.log(chooseColor.value);
     //to change the color of the divs we set an event listener on the container. and we check if the event class list value is equal with our class
   container.addEventListener("mousemove", (event)=>{
-
-    let target = event.target;
-
-     if(target.classList.value == "rows1 divs"){target.style.backgroundColor =chooseColor.value}
-     
+           let target = event.target;
+            if(target.classList.value == "rows1 divs"){
+              target.style.backgroundColor =chooseColor.value
+            }
   })
 }
-  
-    
- 
  
 
  function setValue (){
@@ -71,6 +57,17 @@ function color(){
         console.log(sketchHeight);
         console.log(sketchWidth);
      })  
+
+
+     slider.addEventListener('touchmove', e=>{
+      [...e.changedTouches].forEach(touch =>{
+        rangeValue.textContent = `Submit(${slider.value}) `; 
+        sketchWidth = slider.value;
+        sketchHeight = slider.value;
+        console.log(sketchHeight);
+        console.log(sketchWidth);
+      })
+    })
    
 }
 

@@ -65,7 +65,7 @@
     display: flex;
     flex-direction:row;  
      align-items: center; 
-    justify-content:    center ; 
+    justify-content:   center; 
     width: 600px;
     height:600px;
     max-width: 90vw;
@@ -79,10 +79,11 @@
 }
 
 
+
 .divs, .columns1  {
     transition:all;
     transition-duration: 0.5s;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     /* background-image: url(images/brush.png); */
     background-position: center;
     background-repeat: no-repeat;
