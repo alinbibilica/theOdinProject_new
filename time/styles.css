@@ -23,7 +23,7 @@
 .dateTime {
     display: flex;
     flex-direction: row;
-     
+     gap: 20px;
     font-family: "Bungee Spice", sans-serif;
     font-weight: 400;
     font-style:normal;
@@ -31,13 +31,14 @@
 }
 
 .dateValue, .timeValue {
-    /* border: 1px solid white; */
-    /* width: 40vw; */
+    
+     
     height: fit-content;
     font-size: xx-large;
     text-align: center;
 }
 
+ 
 .Aris{
     /* border:1px solid white; */
     padding: 10px;
@@ -54,8 +55,8 @@
     background-repeat: no-repeat;
     width:50vw;
     height:80vh;
- 
-     
+    
+    top: 50vh; 
  }
 
 .varsta {
@@ -73,4 +74,7 @@
     [class*="dateTime"] {
         flex-direction: column;
     }
+    [id*="poza"] {
+        width: 100vw;
+     }
   }
