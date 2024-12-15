@@ -39,9 +39,24 @@
 }
 
 .Aris{
-    border:1px solid white;
+    /* border:1px solid white; */
     padding: 10px;
+    display:flex;
+    
 }
+
+ #poza{
+     
+    /* background-image: url(images/Clipped_image_20241215_225310.png); */
+    background-image: url(images/2xcf.png);
+    background-position:center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width:30vw;
+    height:60vh;
+     
+ }
+
 .varsta {
     text-align: center;
     font-family: "Mountains of Christmas", serif;
