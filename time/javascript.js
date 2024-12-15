@@ -12,7 +12,7 @@ setInterval(function(){
      varsta.textContent = returnAge();
 }, 1000);
 
- 
+  
 
 function returnAge(){
 
@@ -33,7 +33,7 @@ function returnAge(){
         monthOld : function(){ return this.currentMonth - this.monthOfBirth},
         daysOld  : function(){ return this.currentDay - this.dayOfBirth},
         hoursOld : function(){ return this.currentHour - this.hourOfBirth},
-        minutesOld : function(){ return this.currentMinute- this.minuteOfBirth},
+        minutesOld : function(){ return this.currentMinute - this.minuteOfBirth},
     
     }
 
