@@ -11,16 +11,13 @@ populateDisplay();
 
 
 
-
-
-
 function results(){
     arrayFromValue = displayValue.split(operator);
     console.log(arrayFromValue);
 
-    value1 = parseInt(arrayFromValue[0]);
-    value2 = parseInt(arrayFromValue[1]);
-    //operator = "+";
+    value1 = parseFloat(arrayFromValue[0]);
+    value2 = parseFloat(arrayFromValue[1]);
+    
 
     console.log("first Value", value1);
     console.log("second value", value2);
@@ -41,9 +38,11 @@ function populateDisplay(){
                 
                 console.log("check operator state:", operator);
                 
-                if(value.target.textContent != "DEL"){     
-                    displayResults.textContent += value.target.textContent;
-                    displayValue = displayResults.textContent;
+                if(value.target.textContent != "DEL" ){  
+                    // displayResults.textContent += value.target.textContent;
+                    // displayValue = displayResults.textContent;
+
+                    updateDis(value);
                 }
 
                 
@@ -56,12 +55,22 @@ function populateDisplay(){
                 
                 
                 if(value.target.textContent == "AC"){ displayResults.textContent = ''};
-                if(value.target.textContent == "="){ displayResults.textContent = parseInt(finalResult)};
- 
+                if(value.target.textContent == "="){ 
+                    const resultValue = parseFloat(finalResult).toFixed(2);
+                    console.log("the result value", resultValue);
+                    displayResults.textContent = resultValue; 
+                    value1 = parseFloat(displayResults.textContent);
+                };
+               
             })  
     });
 }
+ 
 
+function updateDis(valoare){
+    displayResults.textContent += valoare.target.textContent;
+                    displayValue = displayResults.textContent;
+};
 
 function operate (op1, op2, operator){
 
