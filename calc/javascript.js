@@ -1,7 +1,11 @@
 const displayResults = document.querySelector(".display");
 const button = document.querySelectorAll(".butttons");
-let displayValue;
+const equal = document.querySelector(".equal");
+const DELbutton = document.querySelector(".DEL");
 
+let displayValue;
+let value1, value2, operator, finalResult;
+let arrayFromValue;
 
 populateDisplay();
 
@@ -9,41 +13,70 @@ populateDisplay();
 
 
 
+
 function results(){
-    console.log("results function:" + displayValue);
+    arrayFromValue = displayValue.split(operator);
+    console.log(arrayFromValue);
+
+    value1 = parseInt(arrayFromValue[0]);
+    value2 = parseInt(arrayFromValue[1]);
+    //operator = "+";
+
+    console.log("first Value", value1);
+    console.log("second value", value2);
+    console.log("operator", operator);
+
+    let result = operate (value1, value2, operator);
+    console.log("...", result)
 }
 
-function populateDisplay(){
-    
-    
+ 
 
+function populateDisplay(){  
+    
     button.forEach((item)=>{
             item.addEventListener("click", (e)=>{
 
                 let value = e;
-                displayResults.textContent += value.target.textContent;
-                displayValue = parseInt(displayResults.textContent);
-                results();
-            })
-            
-    });
+                
+                console.log("check operator state:", operator);
+                
+                if(value.target.textContent != "DEL"){     
+                    displayResults.textContent += value.target.textContent;
+                    displayValue = displayResults.textContent;
+                }
 
-   
+                
+                if(value.target.textContent == "+"){ operator = '+'};
+                if(value.target.textContent == "-"){ operator = '-'};
+                if(value.target.textContent == "*"){ operator = '*'};
+                if(value.target.textContent == "/"){ operator = '/'};
+                 
+                results();
+                
+                
+                if(value.target.textContent == "AC"){ displayResults.textContent = ''};
+                if(value.target.textContent == "="){ displayResults.textContent = parseInt(finalResult)};
+ 
+            })  
+    });
 }
 
 
 function operate (op1, op2, operator){
-    if(operator == "+"){ add(op1, op2); };
-    if(operator == "-"){ substract(op1, op2); };
-    if(operator == "*"){ multiply(op1, op2); };
-    if(operator == "/"){ divide(op1, op2); };
+
+    if(operator == "+"){ finalResult = add(op1, op2); return finalResult};
+    if(operator == "-"){ finalResult = substract(op1, op2); return finalResult};
+    if(operator == "*"){ finalResult =  multiply(op1, op2); return finalResult};
+    if(operator == "/"){ finalResult =  divide(op1, op2); return finalResult};
+
+
+    function add(op1, op2){ return op1 + op2};
+    function substract(op1, op2){return op1 - op2};
+    function multiply(op1, op2){return op1 * op2};
+    function divide(op1, op2){return op1 / op2};
+
+    console.log(".....", add);
 }
 
 
-function add(op1, op2){ return op1 + op2};
-
-function substract(op1, op2){return op1 - op2};
-
-function multiply(op1, op2){return op1 * op2};
-
-function divide(op1, op2){return op1 / op2};
