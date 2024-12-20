@@ -7,6 +7,8 @@ let displayValue;
 let value1, value2, operator, finalResult;
 let arrayFromValue;
 
+
+
 populateDisplay();
 
 
@@ -36,31 +38,51 @@ function populateDisplay(){
 
                 let value = e;
                 
+
+
                 console.log("check operator state:", operator);
+                console.log("check display value state:", displayValue);
+
                 
                 if(value.target.textContent != "DEL" ){  
+
+                    
                     // displayResults.textContent += value.target.textContent;
                     // displayValue = displayResults.textContent;
+                    if(value.target.textContent == "+"){ if(operator!=undefined){ return } 
+                                                        
+                                                        else operator = '+'};
 
+                    if(value.target.textContent == "-"){ if(operator!=undefined){return} else operator = '-'};
+                    if(value.target.textContent == "*"){ if(operator!=undefined){return} else operator = '*'};
+                    if(value.target.textContent == "/"){ if(operator!=undefined){return} else operator = '/'};
+                    
                     updateDis(value);
+                    results(); 
                 }
 
                 
-                if(value.target.textContent == "+"){ operator = '+'};
-                if(value.target.textContent == "-"){ operator = '-'};
-                if(value.target.textContent == "*"){ operator = '*'};
-                if(value.target.textContent == "/"){ operator = '/'};
+                
+               
                  
-                results();
                 
                 
-                if(value.target.textContent == "AC"){ displayResults.textContent = ''};
+                
+                if(value.target.textContent == "AC"){ displayResults.textContent = ''; 
+                                                        clearValues(); 
+                                                        console.log("On AC click: first value:", value1 + "second value:", value2 + "operator: ", operator)
+                                                    };
+               
+               
+               
                 if(value.target.textContent == "="){ 
-                    const resultValue = parseFloat(finalResult).toFixed(2);
-                    console.log("the result value", resultValue);
-                    displayResults.textContent = resultValue; 
-                    value1 = parseFloat(displayResults.textContent);
-                };
+                                                        const resultValue = parseFloat(finalResult).toFixed(2);
+                                                        console.log("the result value", resultValue);
+                                                        displayResults.textContent = resultValue; 
+                                                        // value1 = parseFloat(displayResults.textContent);
+                                                        value1 = resultValue;
+                                                        operator = undefined;
+                                                    };
                
             })  
     });
@@ -68,9 +90,17 @@ function populateDisplay(){
  
 
 function updateDis(valoare){
+
+    
+     
     displayResults.textContent += valoare.target.textContent;
                     displayValue = displayResults.textContent;
+        console.log("from updateValue: ==>>", displayValue.substring(displayValue.length -1 ) + "==>", displayValue.substring(displayValue.length -2 )  );
+   
 };
+
+
+function clearValues(){ value1 = undefined; value2 = undefined; operator= undefined};
 
 function operate (op1, op2, operator){
 
@@ -85,7 +115,7 @@ function operate (op1, op2, operator){
     function multiply(op1, op2){return op1 * op2};
     function divide(op1, op2){return op1 / op2};
 
-    console.log(".....", add);
+     
 }
 
 
