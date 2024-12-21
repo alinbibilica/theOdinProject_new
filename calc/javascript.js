@@ -49,9 +49,10 @@ function populateDisplay(){
                     
                     // displayResults.textContent += value.target.textContent;
                     // displayValue = displayResults.textContent;
-                    if(value.target.textContent == "+"){ if(operator!=undefined){ return } 
+                    if(value.target.textContent == "+"){ if(operator!=undefined){return } 
                                                         
-                                                        else operator = '+'};
+                                                        else 
+                                                        operator = '+'};
 
                     if(value.target.textContent == "-"){ if(operator!=undefined){return} else operator = '-'};
                     if(value.target.textContent == "*"){ if(operator!=undefined){return} else operator = '*'};
