@@ -20,13 +20,9 @@ function results(){
     value1 = parseFloat(arrayFromValue[0]);
     value2 = parseFloat(arrayFromValue[1]);
     
-
-    console.log("first Value", value1);
-    console.log("second value", value2);
-    console.log("operator", operator);
-
+ 
     let result = operate (value1, value2, operator);
-    console.log("...", result)
+ 
 }
 
  
@@ -49,11 +45,7 @@ function populateDisplay(){
                     
                     // displayResults.textContent += value.target.textContent;
                     // displayValue = displayResults.textContent;
-                    if(value.target.textContent == "+"){ if(operator!=undefined){return } 
-                                                        
-                                                        else 
-                                                        operator = '+'};
-
+                    if(value.target.textContent == "+"){ if(operator!=undefined || displayResults.textContent == undefined){return }  else operator = '+'; };
                     if(value.target.textContent == "-"){ if(operator!=undefined){return} else operator = '-'};
                     if(value.target.textContent == "*"){ if(operator!=undefined){return} else operator = '*'};
                     if(value.target.textContent == "/"){ if(operator!=undefined){return} else operator = '/'};
