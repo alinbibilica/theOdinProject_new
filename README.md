@@ -10,7 +10,7 @@ The Odin Project has 3 stages:
 
 > This is where it all begins! A hands-on introduction to all of the essential tools you'll need to build real, working websites. You'll learn what web developers actually do – the foundations you'll need for later courses.
 
-##### Live previous of some tasks i`ve done in the foundations stage:
+###### Live previous of some tasks i`ve done in the foundations stage:
 
 - [Calculator](https://alinbibilica.github.io/theOdinProject_new/calc/)
 - [Eatch - A - Sketch](https://alinbibilica.github.io/theOdinProject_new/eAs/)
