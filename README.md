@@ -17,3 +17,13 @@ The Odin Project has 3 stages:
 - [Piano](https://alinbibilica.github.io/theOdinProject_new/drums/)
 - [HexToRGB](https://alinbibilica.github.io/theOdinProject_new/hexRGB/)
 - [RockPaperScissor](https://alinbibilica.github.io/theOdinProject_new/rockPaperScissors/)
+
+
+#### 2. [Full Stack JavaScript](https://www.theodinproject.com/paths/full-stack-javascript)
+
+> This path takes you through our entire JavaScript curriculum. The courses should be taken in the order that they are displayed. You'll learn everything you need to know to create beautiful responsive websites from scratch using JavaScript and NodeJS.  
+
+
+#### 3. [Full Stack Ruby on Rails](https://www.theodinproject.com/paths/full-stack-ruby-on-rails)
+
+> This path takes you through our entire Ruby on Rails curriculum. The courses should be taken in the order that they are displayed. You'll learn everything you need to know to create beautiful responsive websites from scratch using Ruby on Rails.
