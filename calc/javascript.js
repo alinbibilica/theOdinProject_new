@@ -45,10 +45,10 @@ function populateDisplay(){
                     
                     // displayResults.textContent += value.target.textContent;
                     // displayValue = displayResults.textContent;
-                    if(value.target.textContent == "+"){ if(operator!=undefined || displayResults.textContent == undefined){return }  else operator = '+'; };
-                    if(value.target.textContent == "-"){ if(operator!=undefined){return} else operator = '-'};
-                    if(value.target.textContent == "*"){ if(operator!=undefined){return} else operator = '*'};
-                    if(value.target.textContent == "/"){ if(operator!=undefined){return} else operator = '/'};
+                    if(value.target.textContent == "+"){ if(operator!=undefined || value1 == undefined){return }  else operator = '+'; };
+                    if(value.target.textContent == "-"){ if(operator!=undefined || value1 == undefined){return} else operator = '-'};
+                    if(value.target.textContent == "*"){ if(operator!=undefined || value1 == undefined){return} else operator = '*'};
+                    if(value.target.textContent == "/"){ if(operator!=undefined || value1 == undefined){return} else operator = '/'};
                     
                     updateDis(value);
                     results(); 
