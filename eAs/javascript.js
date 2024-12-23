@@ -41,6 +41,7 @@ function color(){
   container.addEventListener("mousemove", (event)=>{
            let target = event.target;
             if(target.classList.value == "rows1 divs"){
+              console.log(chooseColor.value);
               target.style.backgroundColor =chooseColor.value
             }
   })
