@@ -6,6 +6,14 @@
 
 The Odin Project has 3 stages:
 
-#### Foundations (https://www.theodinproject.com/paths/foundations/courses/foundations)
+#### 1. [Foundations](https://www.theodinproject.com/paths/foundations/courses/foundations)
 
 > This is where it all begins! A hands-on introduction to all of the essential tools you'll need to build real, working websites. You'll learn what web developers actually do – the foundations you'll need for later courses.
+
+##### Live previous of the some tasks i`ve done in the foundations stage:
+
+- [Calculator](https://alinbibilica.github.io/theOdinProject_new/calc/)
+- [Eatch - A - Sketch](https://alinbibilica.github.io/theOdinProject_new/eAs/)
+- [Piano](https://alinbibilica.github.io/theOdinProject_new/drums/)
+- [HexToRGB](https://alinbibilica.github.io/theOdinProject_new/hexRGB/)
+- [RockPaperScissor](https://alinbibilica.github.io/theOdinProject_new/rockPaperScissors/)
