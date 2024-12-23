@@ -6,7 +6,7 @@
 
 The Odin Project has 3 stages:
 
-#### 1. [Foundations](https://www.theodinproject.com/paths/foundations/courses/foundations)   __COMPLETED__
+#### 1. [Foundations](https://www.theodinproject.com/paths/foundations/courses/foundations)   __(COMPLETED)__
 
 > This is where it all begins! A hands-on introduction to all of the essential tools you'll need to build real, working websites. You'll learn what web developers actually do – the foundations you'll need for later courses.
 
