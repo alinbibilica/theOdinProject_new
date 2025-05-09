@@ -1,0 +1,37 @@
+*{
+    background-color: rgb(165, 135, 135);
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    border: 1px solid white;
+    width:100vw;
+    height:100vh;
+    margin: 5px;
+    padding: 5px;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+.container {
+    background-color:rgb(241, 79, 39);
+     width: 70%;
+     height: 80%;
+     display: flex;
+     text-align: center;
+     align-items: center;
+}
+
+.parti {
+    width:30%;
+    height:30%;
+    border: 3px dotted white;
+  
+}
+.parti:hover{
+    background-color: lightblue;
+    
+    margin-bottom: 20px;
+}
+.parti::before, .parti::after{
+    content: "***";
+}
