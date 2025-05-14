@@ -1,28 +1,48 @@
 *{
-    background-color: rgb(165, 135, 135);
-    color: white;
+    background-color: rgb(252, 252, 252);
+    color: rgb(12, 12, 12);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bolder;
     border: 1px solid white;
-    width:100vw;
-    height:100vh;
+    /* width:fit-content; */
+    height:auto;
     margin: 5px;
     padding: 5px;
     max-width: 100vw;
     max-height: 100vh;
+    border: 1px dotted black;
 }
 
+
+.header, .footer {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.header:hover {
+background-color: blue;
+}
+
+ .footer:hover {
+    color: blue;
+    }
+    
+
 .container {
-    background-color:rgb(241, 79, 39);
-     width: 70%;
-     height: 80%;
+    background-color:rgb(189, 169, 164);
+ 
      display: flex;
      text-align: center;
      align-items: center;
+     display: flex;
+     flex-direction: column;
 }
 
 .parti {
-    width:30%;
+    width:80vw;
     height:30%;
     border: 3px dotted white;
   
