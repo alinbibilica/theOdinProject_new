@@ -1,0 +1,20 @@
+*{
+    background-color: lightblue;
+    text-align: center;
+   
+    
+}
+
+.container {
+    border: 2px solid black;
+    height: 100vh;
+    align-content: center;
+
+}
+
+#loopOutput {
+    display: flex;
+    gap: 10px;
+    border: 1px solid black;
+    flex-wrap: wrap;
+}
