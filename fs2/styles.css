@@ -1,0 +1,13 @@
+*{
+    background-color: lightblue;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+     
+}
+
+.container *  {
+    border: 1px solid black;
+}
