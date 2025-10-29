@@ -1,13 +1,66 @@
-*{
-    background-color: lightblue;
+:root {
+    --header: 4rem;
+    --footer: 40px;
+    --main: calc(100vh - calc(var(--header) + var(--footer)));
 }
+
+ 
 
 .container {
     display: flex;
     flex-direction: column;
-     
+     align-items: center;
+     width: 99vw;
+     height: 97vh;
+     justify-content: space-between;
+     /* border: 1px solid black; */
+   
 }
 
-.container *  {
-    border: 1px solid black;
+
+.header , .main, .footer{
+    background-color: rgb(24, 222, 248);
+    width: calc(100% - 20px);
+   text-align: center;
+   color: black;
+}
+
+.header {
+    height: var(--header);
+    border: 2px solid black;
+}
+.footer{
+    height: var(--footer);
+      border: 2px solid black;
+}
+.main{
+    height: var(--main);
+    border: 2px dotted white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+#mytable {
+    width: 70vw;
+    background-color: white;
+    position: fixed;
+    
+}
+
+td:nth-child(2):hover {
+    background-color: green;
+    color: blue;
+    cursor: pointer;
+    box-shadow: 20px 20px 20px;
+}
+
+td:hover {
+    background-color: rgb(128, 0, 0);
+    color: blue;
+    cursor: pointer;
+    box-shadow: -20px 20px 20px;
+    cursor: crosshair;
 }
