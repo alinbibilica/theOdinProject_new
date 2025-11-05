@@ -45,3 +45,22 @@ textarea {
 button {
     margin-left: 0.5em;
 }
+
+.slider1    {
+    border: 1px solid black;
+    display:flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    margin: auto;
+}
+
+.res {
+    border: 2px dotted blue;
+    width: 80%;
+    padding: 4px;
+    margin: 4px;
+
+}
+
+ 

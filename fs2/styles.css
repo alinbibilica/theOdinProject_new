@@ -14,11 +14,22 @@
      height: 97vh;
      justify-content: space-between;
      /* border: 1px solid black; */
-  
-   
 }
 
+form {display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid black;
+    width: fit-content;
+    height: fit-content;
+    height: 50vh;
+    justify-content: space-around;
+}
 
+legend {
+    color:blue;
+      
+}
 .header , .main, .footer{
     /* background-color: rgb(24, 222, 248); */
     width: calc(100% - 20px);
