@@ -105,13 +105,22 @@
     
  }
 
- 
-
  input {
   
    display:block;
    border-radius: 5px;
-  
+   border-width: 1px;
+ }
+
+ input[type="password"]:invalid{
+    border-color: red;
+    border-width: 2px;
+    background-color: lightcoral;
+ }
+
+ input:focus{
+    border-color: rgb(114, 8, 253);
+    box-shadow: 5px 5px 10px;
  }
 
  fieldset {
@@ -145,4 +154,44 @@
  .alreadyUser {
      
     padding: 20px 0px;
+ }
+
+ @media (max-width:412px){
+    .container{
+        flex-direction: column;
+        height: 100vh
+    }
+
+    .left_side {
+        width: 100vw;
+        height:30%;
+    }
+    .right_side{
+        width: 100vw;
+        height: auto;
+    }
+    .header{
+        
+    position:relative;
+    top:0%;
+    text-align: center;
+    height: fit-content;
+    padding: 5px;
+    width: auto;
+    }
+
+    fieldset {
+        grid-template-columns: 100%;
+           gap: 10xp 10px;
+         padding: 10px;
+    }
+
+    .myForm{
+    
+    /* border: 1px solid blue; */
+    height: auto;
+    top:5%;
+    display: flex;
+    flex-direction: column;
+    }
  }

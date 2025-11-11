@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignUp Form</title>
+    <title>Sign Up Form</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -48,7 +48,7 @@
 
                              <div>
                             <label for="email">eMail:</label>
-                            <input type="email" name="email" id="email">
+                            <input type="email" name="email" id="email" required>
                                     </div>
 
                                     <div>
@@ -58,12 +58,12 @@
 
                                         <div>
                             <label for="password">Password:</label>
-                            <input type="password" name="password" id="password">
+                            <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="TOP! at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
                                                     </div>
 
                                                     <div>
                             <label for="confPassword">Confirm Password:</label>
-                            <input type="password" name="confPassword" id="confPassword">
+                            <input type="password" name="confPassword" id="confPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="TOP! at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
                                                         </div>
                             </fieldset>
 
@@ -71,7 +71,7 @@
 
                         </form>
                         <div class="alreadyUser"><p>Already have an account? 
-                            <a href="www.google.com">Sign in!</a>
+                            <a href="www.theodinproject.com">Sign in!</a>
 </p></div>
                 </div>
 
